@@ -1,0 +1,7 @@
+#surefire_0
+#Fri Dec 16 22:07:35 IST 2022
+Tag1=@Regression
+basedir=/Users/saurabh./CVL
+surefire.suiteXmlFiles=ChromeTestng.xml
+user.dir=/Users/saurabh./CVL
+localRepository=/Users/saurabh./.m2/repository
