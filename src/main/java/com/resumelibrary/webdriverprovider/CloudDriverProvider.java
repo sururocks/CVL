@@ -76,8 +76,8 @@ public class CloudDriverProvider extends WebDriverProvider implements Constants 
     }
        void remoteLambdaTestinChrome(Map threadMap, String testName) {
         try {
-            String username = PropertyFileReader.getInstance().getProperty("lambdaUsername");
-            String accessKey = PropertyFileReader.getInstance().getProperty("lambdaAccessKey");
+            String username = System.getProperty("userName");
+            String accessKey = System.getProperty("userKey");
 
             String buildIdFromConfig = PropertyFileReader.getInstance().getProperty("lambdaStackBuildId");
             String buildId = WebURLHelper.getParameterFromEnvOrSysParam("BUILD_NUMBER", buildIdFromConfig);
@@ -94,7 +94,7 @@ public class CloudDriverProvider extends WebDriverProvider implements Constants 
             caps.setCapability("browserVersion", "100.0");
 
             HashMap<String, Object> ltOptions = new HashMap<String, Object>();
-            ltOptions.put("build", "Build-15-Dec-4");
+            ltOptions.put("build", System.getProperty("buildName"));
             ltOptions.put("project", project);
             ltOptions.put("name", testName);
             ltOptions.put("console", "info");
