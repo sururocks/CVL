@@ -100,10 +100,10 @@ public class CloudDriverProvider extends WebDriverProvider implements Constants 
             ltOptions.put("console", "info");
             ltOptions.put("visual", true);
             ltOptions.put("platformName", "Windows 10");
-            ltOptions.put("selenium_version", "4.1.2");
+            ltOptions.put("selenium_version", "3.141.0");
             ltOptions.put("driver_version", "100.0");
             ltOptions.put("resolution", "1920x1080");
-           ltOptions.put("idleTimeout","1800");
+            ltOptions.put("idleTimeout","1800");
             ltOptions.put("network", false);
             ltOptions.put("tunnel", true);
             ltOptions.put("tunnelName","SharedTunnel");
